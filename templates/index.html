@@ -20,9 +20,13 @@
             <a href="#home" class="active">Home</a>
             <a href="#about">Record Audio</a>
             <a href="#education">Options</a>
-
-            <span class="active-nav"></span>
-            <span class="animate" style="--i:2;"></span>
+            <div>
+                <a href="{{ url_for('login') }}">Login</a>
+                {% if session['user_name'] %}
+                <a href="{{ url_for('logout') }}">Logout</a>
+                    <span>Hello, {{ session['user_name'] }}</span>
+                {% endif %}
+            </div>
         </nav>
     </header>
 
@@ -176,6 +180,10 @@
             <button id="process-encryption-button">Encrypt Audio</button>
             <textarea id="encrypted-output" rows="10" cols="50" placeholder="Encrypted output will appear here" readonly></textarea>
             <a id="download-encrypted-file" style="display: none;">Download Encrypted File</a>
+             <div id="email-section">
+                <input type="email" id="email-input" placeholder="Enter your email">
+                <button id="send-email-button">Send</button>
+            </div>
         </div>
     </section>
 
