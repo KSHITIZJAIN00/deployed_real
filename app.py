@@ -18,7 +18,7 @@ CORS(app)
 app.secret_key = '694df2fe7fd16a3d82a5ef9a55b991d4223e436a684c429a'  # Replace with a strong, unique key
 
 # MongoDB setup
-client = MongoClient('mongodb://localhost:27017/')  # Adjust the URI as necessary
+client = MongoClient('mongodb+srv://kshitizjaincs22:kshitizjain123@taskmanager.x5qaqcd.mongodb.net/taskdb?retryWrites=true&w=majority&appName=TaskManager')  # Adjust the URI as necessary
 db = client['login_data']  # Use your database name here
 users_collection = db['users']  # Collection for storing user data
 
