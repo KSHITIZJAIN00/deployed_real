@@ -7,7 +7,3 @@ librosa
 pyttsx3
 SpeechRecognition
 cryptography
-base64
-io
-os
-tempfile
