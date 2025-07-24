@@ -7,3 +7,4 @@ librosa
 pyttsx3
 SpeechRecognition
 cryptography
+pymongo
